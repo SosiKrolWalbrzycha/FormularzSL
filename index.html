@@ -30,7 +30,10 @@
             <div class="graphWindow">
             </div>
 
-            <div class="formWindow" id="contactform">
+            <form class="formWindow" id="contactform"
+                action="https://formsubmit.io/send/4cf3dc36-5c26-4786-98b7-994c182f9bbe" method="POST">
+
+                <input name="_redirect" type="hidden" id="name" value="https://mconcrete.art/thx.html">
 
 
                 <div class="formWindow__page page1 active">
@@ -39,23 +42,27 @@
 
                     <label for="select">Choose what the contact is about</label>
 
-                    <select name="choose the produkt" id="need" class="formWindow__page-select">
-                        <option selected disabled value="0"> -- select an option -- </option>
-                        <option value="1">Purchase of a ready-made product without personalization</option>
-                        <option value="2">Adding a personalized detail to an already designed product line</option>
-                        <option value="3">New product design and delivery</option>
+                    <select name="chooseoption" type="text" id="need" class="formWindow__page-select">
+                        <option selected disabled value="0" name="nooption" type="text"> -- select an option --
+                        </option>
+                        <option value="1" name="option1" type="text">Purchase of a ready-made product without
+                            personalization</option>
+                        <option value="2" name="option2" type="text">Adding a personalized detail to an already designed
+                            product line</option>
+                        <option value="3" name="option3" type="text">New product design and delivery</option>
                     </select>
 
 
-                    <label for="select" id="kindOfProductLabel" >Choose the kind of product:</label>
+                    <label for="select" id="kindOfProductLabel">Choose the kind of product:</label>
 
-                    <select name="choose the produkt" id="kindOfProduct" class="formWindow__page-select">
-                        <option selected disabled value="0"> -- select an option -- </option>
-                        <option value="1">Flower Vase</option>
-                        <option value="2">Flower Pot</option>
-                        <option value="3">Candle holder</option>
-                        <option value="4">Cigarette ashtray</option>
-                        <option value="6">Cigarette ashtray</option>
+                    <select name="chooseproduct" type="text" id="kindOfProduct" class="formWindow__page-select">
+                        <option selected disabled value="0" name="nooption" type="text"> -- select an option --
+                        </option>
+                        <option value="1" name="option1" type="text">Flower Vase</option>
+                        <option value="2" name="option2" type="text">Flower Pot</option>
+                        <option value="3" name="option3" type="text">Candle holder</option>
+                        <option value="4" name="option4" type="text">Cigarette ashtray</option>
+                        <option value="5" name="option5" type="text">Cigarette ashtray</option>
                     </select>
 
                 </div>
@@ -68,25 +75,27 @@
 
 
                     <label for="select" id="lineOfProductsLabel">Choose the product line</label>
-                    <select name="choose the produkt line" id="lineOfProducts" class="formWindow__page-select">
+                    <select name="lineofproduct" type="text" id="lineOfProducts" class="formWindow__page-select">
 
-                        <option selected disabled value="0"> -- select an option -- </option>
-                        <option value="1">Origami</option>
-                        <option value="2">Regulus</option>
-                        <option value="3">TwistedSquare</option>
-                        <option value="4">CannonBall</option>
+                        <option selected disabled value="0" name="nooption" type="text"> -- select an option --
+                        </option>
+                        <option value="1" name="option1" type="text">Origami</option>
+                        <option value="2" name="option2" type="text">Regulus</option>
+                        <option value="3" name="option3" type="text">TwistedSquare</option>
+                        <option value="4" name="option4" type="text">CannonBall</option>
                     </select>
 
 
 
 
                     <label for="select" id="colorOfProductsLabel">Choose the product color</label>
-                    <select name="choose the color" id="colorOfProducts" class="formWindow__page-select">
-                        <option selected disabled value="0"> -- select an option -- </option>
-                        <option value="1">White concrete</option>
-                        <option value="2">Light gray concrete</option>
-                        <option value="3">Dark gray concrete</option>
-                        <option value="4">Graphite concrete</option>
+                    <select name="colorofproduct" type="text" id="colorOfProducts" class="formWindow__page-select">
+                        <option selected disabled value="0" name="nooption" type="text"> -- select an option --
+                        </option>
+                        <option value="1" name="option1" type="text">White concrete</option>
+                        <option value="2" name="option2" type="text">Light gray concrete</option>
+                        <option value="3" name="option3" type="text">Dark gray concrete</option>
+                        <option value="4" name="option4" type="text">Graphite concrete</option>
                     </select>
 
 
@@ -94,7 +103,9 @@
 
 
                     <label for="textarea" id="describeProductsLabel">Describe what product to design for you:</label>
-                    <textarea name="" id="describeProducts" cols="20" rows="2" class="formWindow__page-textarea" placeholder="Describe everything I should know about the product whose project you want to order. The most important, describe the basic associations associated with the product, what it should be similar to, what it should be inspired by. Please don't forget about the sizes (length/width/height)."></textarea>
+                    <textarea name="descriptionfield" type="text" id="describeProducts" cols="20" rows="2"
+                        class="formWindow__page-textarea"
+                        placeholder="Describe everything I should know about the product whose project you want to order. The most important, describe the basic associations associated with the product, what it should be similar to, what it should be inspired by. Please don't forget about the sizes (length/width/height)."></textarea>
                     <div class="info"></div>
 
 
@@ -106,9 +117,14 @@
                 <div class="formWindow__page page3">
                     <h2>Provide your contact details:</h2>
                     <label for="input" id="nameLabel">Name and surname:</label>
-                    <input type="text" name="imię" class="formWindow__page-input" id="nameField" placeholder="-- please enter your name and surname --">
+                    <input name="namefield" type="text" id="nameField" class="formWindow__page-input"
+                        placeholder="-- please enter your name and surname --">
                     <label for="input" id="emailLabel">Email adress:</label>
-                    <input type="email" name="email adress" class="formWindow__page-input" id="emailfield" placeholder="-- please enter your email address --">
+                    <input name="emailfield" type="text" id="emailfield" 
+                    class="formWindow__page-input"
+                        placeholder="-- please enter your email address --">
+
+                        <input name="_formsubmit_id" type="text" style="display:none">
 
 
                 </div>
@@ -116,14 +132,15 @@
                 <div class="formWindow__agree">
 
                     <div class="formWindow__agree-radio">
-                        
+
                         <input type="radio" name="radio" value="wartość" class="radio">
-                    
+
                     </div>
 
                     <div class="formWindow__agree-txt">
                         <p>
-                            I accept the terms and conditions of the website as well as all privacy policies of the portal.</p>
+                            I accept the terms and conditions of the website as well as all privacy policies of the
+                            portal.</p>
                     </div>
 
                 </div>
@@ -132,15 +149,15 @@
 
 
                 <div class="buttons">
-                    <button class="buttons__prevBtn" disabled>Previous step</button>
-                    <button class="buttons__nextBtn" disabled>Continue</button>
-                    <button class="buttons__sendBtn" disabled>Send</button>
+                    <button class="buttons__prevBtn" disabled value="novalue" type="button">Previous step</button>
+                    <button class="buttons__nextBtn" disabled value="novalue" type="button">Continue</button>
+                    <button class="buttons__sendBtn" disabled value="Submit" type="submit">Send</button>
 
                 </div>
 
 
 
-            </div>
+            </form>
 
         </div>
 
