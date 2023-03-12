@@ -1,0 +1,251 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: rajdhani, sans-serif;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: rgb(228, 228, 228);
+	max-width: 992px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+header {
+	img {
+		height: 100px;
+		width: 100px;
+	}
+	margin-top: 1em;
+	text-align: center;
+	h1 {
+		padding-bottom: 0.5em;
+	}
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	min-width: 340px;
+}
+
+.window {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+.graphWindow {
+	display: none;
+	flex-direction: row;
+	background-image: url(/dist/img/concrete_candle_holder_castor.jpg);
+	background-position: center;
+	background-size: cover;
+	border-radius: 10px;
+	height: 24em;
+	width: 45%;
+}
+
+.formWindow {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+	background-color: rgb(0, 0, 0);
+	border: none;
+	width: 90%;
+	height: 24em;
+	border-radius: 0.5em;
+	padding: 0em 1em;
+	max-width: 650px;
+
+	&__page {
+		display: none;
+		width: 90%;
+		flex-direction: column;
+		color: white;
+		padding-left: 0em;
+
+		&-select {
+			margin-top: 0.5em;
+			margin-bottom: 1.5em;
+			padding: 0.5em 0.5em;
+			border-radius: 5px;
+			border: none;
+		}
+
+		&-textarea {
+			margin-top: 0.5em;
+			margin-bottom: 1.5em;
+			padding: 0.5em 0.5em;
+			border-radius: 5px;
+			width: 395px;
+			height: 170px;
+			max-width: 395px;
+			max-height: 170px;
+			min-width: 395px;
+			min-height: 170px;
+			border: none;
+		}
+
+		&-input {
+			margin-top: 0.5em;
+			margin-bottom: 1.5em;
+			padding: 0.5em 0.5em;
+			border-radius: 5px;
+
+			border: none;
+		}
+
+		h2 {
+			text-align: center;
+			margin: 1em;
+		}
+
+		
+	}
+
+	&__agree {
+		display: none;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		&-radio {
+			display: flex;
+			margin-left: 1.2em;
+		}
+		&-txt {
+			display: flex;
+			color: rgb(255, 255, 255);
+			padding-left: 1.5em;
+			padding-right: 1.2em;
+		}
+		&-radio:hover {cursor: pointer; }
+
+
+	}
+
+	.active {
+		display: flex;
+	}
+}
+
+.progressBar {
+	display: flex;
+	position: relative;
+	margin-top: 2em;
+	max-width: 650px;
+	width: 90%;
+	height: 3em;
+	justify-content: space-between;
+
+	&__line {
+		position: absolute;
+		height: 1em;
+		top: 33%;
+		width: 100%;
+		z-index: 1;
+	}
+
+	.linewhite {
+		background-color: rgb(255, 255, 255);
+		z-index: 1;
+	}
+
+	.lineblack {
+		background-color: rgb(0, 0, 0);
+		width: 0;
+		z-index: 2;
+		transition: width 0.3s;
+	}
+
+	&__step {
+		display: flex;
+		position: relative;
+		&-step1 {
+			position: absolute;
+			display: flex;
+			height: 3em;
+			width: 3em;
+			justify-content: center;
+			align-items: center;
+			border-radius: 0.5em;
+		}
+		.stepwhite {
+			background-color: white;
+			z-index: 3;
+		}
+		.stepblack {
+			background-color: black;
+			display: none;
+			z-index: 4;
+		}
+		.number {
+			font-size: 1.5rem;
+			font-weight: 700;
+		}
+		.numberwhite {
+			color: white;
+		}
+		.numberblack {
+			color: black;
+		}
+
+		.s1 {
+			display: flex;
+		}
+
+		.animation-in {
+			animation: 0.6s steps;
+		}
+
+		.animation-out {
+			animation: 0.6s steps-out;
+		}
+	}
+}
+
+.buttons {
+	position: absolute;
+	width: 83%;
+	display: flex;
+	justify-content: space-between;
+	bottom: 1.5em;
+	&__prevBtn,
+	&__nextBtn,
+	&__sendBtn {
+		background-color: rgb(255, 255, 255);
+		border: none;
+		color: rgb(0, 0, 0);
+		padding: 0.5em 1em;
+		font-size: 1rem;
+		border-radius: 5px;
+		transition: background-color 0.3s;
+	}
+
+	&__sendBtn {display: none;}
+
+	&__prevBtn:hover,
+	&__nextBtn:hover {
+		background-color: rgb(175, 175, 175);
+		cursor: pointer;
+	}
+
+	&__prevBtn:disabled,
+	&__nextBtn:disabled {
+		background-color: rgb(109, 109, 109);
+		cursor: not-allowed;
+	}
+}
+
+@import './media';
+@import './animations';
+@import './selects';

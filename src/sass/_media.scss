@@ -1,0 +1,17 @@
+@media (min-width: 768px) {
+	.graphWindow {
+		display: flex;
+		width: 50%;
+		margin: 0em 1em;
+	}
+
+	.formWindow {
+		width: 50%;
+		margin-right: 1em;
+	}
+
+	.progressBar {
+		margin: 2em 1em;
+		width: 100%;
+	}
+}

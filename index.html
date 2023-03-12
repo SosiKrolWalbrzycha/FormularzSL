@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/2f555414f0.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Web MultiStep Form</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dist/css/style-ready.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="formTitle">
+            <img src="/dist/img/mc_logo_567.png" alt="Magic Concrete Logo">
+            <h1>Let us know your expectations</h1>
+        </div>
+    </header>
+
+    <main>
+
+        <div class="window">
+
+
+            <div class="graphWindow">
+            </div>
+
+            <div class="formWindow" id="contactform">
+
+
+                <div class="formWindow__page page1 active">
+
+                    <h2>Describe your need (1/3):</h2>
+
+                    <label for="select">Choose what the contact is about</label>
+
+                    <select name="choose the produkt" id="need" class="formWindow__page-select">
+                        <option selected disabled value="0"> -- select an option -- </option>
+                        <option value="1">Purchase of a ready-made product without personalization</option>
+                        <option value="2">Adding a personalized detail to an already designed product line</option>
+                        <option value="3">New product design and delivery</option>
+                    </select>
+
+
+                    <label for="select" id="kindOfProductLabel" >Choose the kind of product:</label>
+
+                    <select name="choose the produkt" id="kindOfProduct" class="formWindow__page-select">
+                        <option selected disabled value="0"> -- select an option -- </option>
+                        <option value="1">Flower Vase</option>
+                        <option value="2">Flower Pot</option>
+                        <option value="3">Candle holder</option>
+                        <option value="4">Cigarette ashtray</option>
+                        <option value="6">Cigarette ashtray</option>
+                    </select>
+
+                </div>
+
+                <div class="formWindow__page page2">
+
+                    <h2>Describe product (2/3):</h2>
+
+
+
+
+                    <label for="select" id="lineOfProductsLabel">Choose the product line</label>
+                    <select name="choose the produkt line" id="lineOfProducts" class="formWindow__page-select">
+
+                        <option selected disabled value="0"> -- select an option -- </option>
+                        <option value="1">Origami</option>
+                        <option value="2">Regulus</option>
+                        <option value="3">TwistedSquare</option>
+                        <option value="4">CannonBall</option>
+                    </select>
+
+
+
+
+                    <label for="select" id="colorOfProductsLabel">Choose the product color</label>
+                    <select name="choose the color" id="colorOfProducts" class="formWindow__page-select">
+                        <option selected disabled value="0"> -- select an option -- </option>
+                        <option value="1">White concrete</option>
+                        <option value="2">Light gray concrete</option>
+                        <option value="3">Dark gray concrete</option>
+                        <option value="4">Graphite concrete</option>
+                    </select>
+
+
+
+
+
+                    <label for="textarea" id="describeProductsLabel">Describe what product to design for you:</label>
+                    <textarea name="" id="describeProducts" cols="20" rows="2" class="formWindow__page-textarea" placeholder="Describe everything I should know about the product whose project you want to order. The most important, describe the basic associations associated with the product, what it should be similar to, what it should be inspired by. Please don't forget about the sizes (length/width/height)."></textarea>
+                    <div class="info"></div>
+
+
+                </div>
+
+
+
+
+                <div class="formWindow__page page3">
+                    <h2>Provide your contact details:</h2>
+                    <label for="input" id="nameLabel">Name and surname:</label>
+                    <input type="text" name="imię" class="formWindow__page-input" id="nameField" placeholder="-- please enter your name and surname --">
+                    <label for="input" id="emailLabel">Email adress:</label>
+                    <input type="email" name="email adress" class="formWindow__page-input" id="emailfield" placeholder="-- please enter your email address --">
+
+
+                </div>
+
+                <div class="formWindow__agree">
+
+                    <div class="formWindow__agree-radio">
+                        
+                        <input type="radio" name="radio" value="wartość" class="radio">
+                    
+                    </div>
+
+                    <div class="formWindow__agree-txt">
+                        <p>
+                            I accept the terms and conditions of the website as well as all privacy policies of the portal.</p>
+                    </div>
+
+                </div>
+
+
+
+
+                <div class="buttons">
+                    <button class="buttons__prevBtn" disabled>Previous step</button>
+                    <button class="buttons__nextBtn" disabled>Continue</button>
+                    <button class="buttons__sendBtn" disabled>Send</button>
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+        <div class="progressBar">
+            <div class="progressBar__line linewhite"></div>
+            <div class="progressBar__line lineblack"></div>
+
+
+
+            <div class="progressBar__step">
+
+                <div class="progressBar__step-step1 stepwhite">
+                    <p class="number numberblack">1</p>
+                </div>
+
+
+                <div class="progressBar__step-step1 stepblack s1">
+                    <p class="number numberwhite">1</p>
+                </div>
+
+            </div>
+
+            <div class="progressBar__step">
+
+                <div class="progressBar__step-step1 stepwhite">
+                    <p class="number numberblack">2</p>
+                </div>
+
+
+                <div class="progressBar__step-step1 stepblack s2">
+                    <p class="number numberwhite">2</p>
+                </div>
+
+            </div>
+
+            <div class="progressBar__step">
+
+                <div class="progressBar__step-step1 stepwhite">
+                    <p class="number numberblack">3</p>
+                </div>
+
+
+                <div class="progressBar__step-step1 stepblack s3">
+                    <p class="number numberwhite">3</p>
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+    </main>
+
+    <script src="/dist/js/script-readyjs.js"></script>
+</body>
+
+</html>
