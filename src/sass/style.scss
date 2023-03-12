@@ -234,12 +234,14 @@ main {
 	&__sendBtn {display: none;}
 
 	&__prevBtn:hover,
+	&__sendBtn:hover,
 	&__nextBtn:hover {
 		background-color: rgb(175, 175, 175);
 		cursor: pointer;
 	}
 
 	&__prevBtn:disabled,
+	&__sendBtn:disabled,
 	&__nextBtn:disabled {
 		background-color: rgb(109, 109, 109);
 		cursor: not-allowed;

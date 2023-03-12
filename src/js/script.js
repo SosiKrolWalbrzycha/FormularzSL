@@ -19,6 +19,12 @@ const pageTwo = document.querySelector('.page2')
 const pageThree = document.querySelector('.page3')
 const pageAgree = document.querySelector('.formWindow__agree')
 
+// Status Variable
+
+let nameStatus = 0
+let emailStatus = 0
+let agreeStatus = 0
+
 // select
 
 const need = document.querySelector('#need')
@@ -84,45 +90,66 @@ describeProducts.addEventListener('selectionchange', () => {
 //Checking name and email input using regexp
 
 const checkEmail = () => {
-
-
 	if (emailField.value.length < 5) {
-		console.log(emailField.value.length);
+		console.log(emailField.value.length)
 		emailLabel.textContent = 'Please write more...'
+		emailStatus = 0
+		sendBtnOn()
 	} else {
 		const validateEmail =
-			/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+			/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 
 		if (validateEmail.test(emailField.value)) {
 			nextBtn.disabled = false
 			emailLabel.textContent = 'Your email address is correct.'
+			emailStatus = 1
+			sendBtnOn()
 		} else {
 			emailLabel.textContent = 'Please enter the email address correctly.'
+			emailStatus = 0
+			sendBtnOn()
 		}
 	}
 }
 const checkName = () => {
 	if (nameField.value.length < 5) {
 		nameLabel.textContent = 'Please write more...'
+		nameStatus = 0
+		sendBtnOn()
 	} else {
 		const validateName = /^(([A-ZŁŻ][a-ząęóżźćńłś]{2,})(-[A-ZŁŻ][a-ząęóżźćńłś]{2,})?)|([a-z]{3} [A-Z][a-z]{2,})$/u
-		;
-
 		if (validateName.test(nameField.value)) {
 			nameLabel.textContent = 'Your name and surname are correct.'
+			nameStatus = 1
+			sendBtnOn()
 		} else {
 			nameLabel.textContent = 'Please enter your name and surname correctly.'
+			nameStatus = 0
+			sendBtnOn()
 		}
 	}
 }
 
 const checkAgree = () => {
-	if (radio.checked = true) {console.log('Wysyłam');} else {console.log('nie wysyłam');}
+	if ((radio.checked = true)) {
+		agreeStatus = 1
+		sendBtnOn()
+	} else {
+		agreeStatus = 0
+		sendBtnOn()
+	}
 }
 
-
-
-
+const sendBtnOn = () => {
+	console.log('dziala funkcja');
+	if (agreeStatus == 1 && nameStatus == 1 && emailStatus == 1) {
+		sendBtn.disabled = false
+		console.log('dziala funkcja if')
+	} else {
+		sendBtn.disabled = true
+		console.log('dziala funkcja else')
+	}
+}
 
 //Buttons and Actions
 
@@ -183,6 +210,8 @@ const stepsDisplay = () => {
 		progressLine.style.width = '50%'
 		progressStep2.style.display = 'flex'
 		progressStep2.classList.add('animation-in')
+		sendBtn.style.display = 'none'
+		nextBtn.style.display = 'block'
 
 		const delay03 = () => {
 			progressStep3.style.display = 'none'
@@ -205,9 +234,9 @@ const stepsDisplay = () => {
 		progressLine.style.width = '100%'
 		progressStep3.style.display = 'flex'
 		progressStep3.classList.add('animation-in')
-		nextBtn.style.display="none"
-		sendBtn.style.display="block"
-		nextBtn.disabled=true;
+		nextBtn.style.display = 'none'
+		sendBtn.style.display = 'block'
+		sendBtn.disabled = true
 	}
 }
 
@@ -219,4 +248,4 @@ const test = () => {
 
 prevBtn.addEventListener('click', removeStep)
 nextBtn.addEventListener('click', addStep)
-
+radio.addEventListener('click', checkAgree)
